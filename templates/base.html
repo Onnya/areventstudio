@@ -7,6 +7,10 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
         #logo-brand {
             font-size: 30px;
@@ -21,7 +25,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a id="logo-brand" class="navbar-brand mr-auto p-2" href="/">
-            <img src="{{url_for('static/img', filename='logo.svg'}}" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="{{url_for('static', filename='img/controller.png')}}" width="30" height="30" class="d-inline-block align-center" alt="">
             AreventStudio
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +37,21 @@
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="/projects">Projects</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Applications</a>
+            <a class="nav-link" href="/applications">Applications</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Links</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Links
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://vk.com/kvashint">Vk</a>
+                  <a class="dropdown-item" href="https://github.com/Onnya">Github</a>
+                  <a class="dropdown-item" href="https://www.instagram.com/tkvashin/">Instagram</a>
+                </div>
+              </li>
         </ul>
         </div>
     </nav>

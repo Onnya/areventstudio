@@ -1,3 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{url_for('static', filename='img/back.jpg')}}" alt="Cyberpunk">
+      </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h2 style="text-align:center;">Today</h2>
+        <p>To date, our team does not carry out any developments. We are actively looking for ideas and you can always offer your help
+            in the <a href="/applications">application section</a>.</p>
+      </div>
+      <div class="col-sm">
+        <h2 style="text-align:center;">Who are we?</h2>
+        <p>We are a small indie game development team that prefers 2d platformers and rogue-like projects. Our team values its small audience
+            and strives to win the hearts of players with the quality and atmosphere, not the number of games released. We also oppose the donation
+            system in projects and exist exclusively thanks to your donations.</p>
+      </div>
+    </div>
+  </div>
 {% endblock %}

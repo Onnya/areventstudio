@@ -11,14 +11,23 @@ def index():
     params["title"] = "AreventStudio"
     return render_template("index.html", **params)
 
+@app.route("/projects")
+def projects():
+    params = {}
+    params["title"] = "Our projects"
+    return render_template("projects.html", **params)
+
+@app.route("/applications")
+def applications():
+    params = {}
+    params["title"] = "Your application"
+    return render_template("applications.html", **params)
+
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
-def main():
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
-
 
 if __name__ == '__main__':
-    main()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
